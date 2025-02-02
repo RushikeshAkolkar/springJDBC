@@ -20,5 +20,7 @@
  </bean>
 
 <bean class="org.springframework.jdbc.core.JdbcTemplate" name="jdbctemplate" p:dataSource-ref="ds"/>
-
+<bean class="com.spring.jdbc.dao.StudentDAOImpl" name="studentdao">
+<property name="jdbctemplate" ref="jdbctemplate"></property>
+</bean>
 </beans>
