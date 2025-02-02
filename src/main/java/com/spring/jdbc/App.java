@@ -26,7 +26,7 @@ public class App
     	student.setName("Kishor Akolkar");
     	student.setCity("Pune");
     	
-    	int r = studentdao.change(student);
+    	int r = studentdao.delete(11);
     	System.out.println("student is change "+r);
     	
     	

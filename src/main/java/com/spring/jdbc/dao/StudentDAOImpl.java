@@ -23,6 +23,12 @@ public class StudentDAOImpl implements StudentDAO{
 		int r = this.jdbctemplate.update(query, student.getName(), student.getCity(),student.getId());
 		return r;
 	}
+	@Override
+	public int delete(int id) {
+		String query = "delete from student where id = ?";
+		int r = this.jdbctemplate.update(query, id);
+		return r;
+	}
 	
 	public JdbcTemplate getJdbctemplate() {
 		return jdbctemplate;
@@ -31,6 +37,8 @@ public class StudentDAOImpl implements StudentDAO{
 	public void setJdbctemplate(JdbcTemplate jdbctemplate) {
 		this.jdbctemplate = jdbctemplate;
 	}
+
+	
 	
 	
 
