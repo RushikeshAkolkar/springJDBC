@@ -24,10 +24,10 @@ public class App
     	Student student = new Student();
     	student.setId(11);
     	student.setName("Kishor Akolkar");
-    	student.setCity("Ahilaynagar");
+    	student.setCity("Pune");
     	
-    	int r = studentdao.insert(student);
-    	System.out.println("student added "+r);
+    	int r = studentdao.change(student);
+    	System.out.println("student is change "+r);
     	
     	
     }
