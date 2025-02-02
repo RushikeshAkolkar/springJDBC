@@ -21,14 +21,17 @@ public class App
     	
     	StudentDAO studentdao =  (StudentDAO) context.getBean("studentdao");
     	
-    	Student student = new Student();
+    	/*Student student = new Student();
     	student.setId(11);
     	student.setName("Kishor Akolkar");
     	student.setCity("Pune");
     	
     	int r = studentdao.delete(11);
-    	System.out.println("student is change "+r);
+    	System.out.println("student is change "+r);*/
+    	//getting from database
     	
+    	Student student = studentdao.getStudent(111);
+    	System.out.println(student);
     	
     }
 }
